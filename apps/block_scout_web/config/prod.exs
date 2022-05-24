@@ -33,7 +33,7 @@ config :block_scout_web, BlockScoutWeb.Endpoint,
 config :block_scout_web, BlockScoutWeb.Tracer, env: "production", disabled?: true
 
 config :logger, :block_scout_web,
-  level: :info,
+  level: :error,
   path: Path.absname("logs/prod/block_scout_web.log"),
   rotate: %{max_bytes: 52_428_800, keep: 19}
 

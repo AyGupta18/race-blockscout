@@ -5,7 +5,7 @@ use Mix.Config
 config :logger, :console, level: :info
 
 config :logger, :ecto,
-  level: :info,
+  level: :error,
   path: Path.absname("logs/prod/ecto.log"),
   rotate: %{max_bytes: 52_428_800, keep: 19}
 

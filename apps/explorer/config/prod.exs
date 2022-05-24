@@ -18,7 +18,7 @@ config :explorer, Explorer.Tracer, env: "production", disabled?: true
 config :explorer, :voter_rewards_for_group, Explorer.Celo.VoterRewardsForGroup
 
 config :logger, :explorer,
-  level: :info,
+  level: :error,
   path: Path.absname("logs/prod/explorer.log"),
   rotate: %{max_bytes: 52_428_800, keep: 19}
 
