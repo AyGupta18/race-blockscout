@@ -18,16 +18,16 @@ config :explorer, Explorer.Tracer, env: "dev", disabled?: true
 config :explorer, :voter_rewards_for_group, Explorer.Celo.VoterRewardsForGroup
 
 config :logger, :explorer,
-  level: :debug,
+  level: :error,
   path: Path.absname("logs/dev/explorer.log")
 
 config :logger, :reading_token_functions,
-  level: :debug,
+  level: :error,
   path: Path.absname("logs/dev/explorer/tokens/reading_functions.log"),
   metadata_filter: [fetcher: :token_functions]
 
 config :logger, :token_instances,
-  level: :debug,
+  level: :error,
   path: Path.absname("logs/dev/explorer/tokens/token_instances.log"),
   metadata_filter: [fetcher: :token_instances]
 
