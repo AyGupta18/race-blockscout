@@ -19,17 +19,20 @@ config :explorer, :voter_rewards_for_group, Explorer.Celo.VoterRewardsForGroup
 
 config :logger, :explorer,
   level: :error,
-  path: Path.absname("logs/dev/explorer.log")
+  path: Path.absname("logs/dev/explorer.log"),
+  rotate: %{max_bytes: 2_097_152, keep: 1}
 
 config :logger, :reading_token_functions,
   level: :error,
   path: Path.absname("logs/dev/explorer/tokens/reading_functions.log"),
-  metadata_filter: [fetcher: :token_functions]
+  metadata_filter: [fetcher: :token_functions],
+  rotate: %{max_bytes: 2_097_152, keep: 1}
 
 config :logger, :token_instances,
   level: :error,
   path: Path.absname("logs/dev/explorer/tokens/token_instances.log"),
-  metadata_filter: [fetcher: :token_instances]
+  metadata_filter: [fetcher: :token_instances],
+  rotate: %{max_bytes: 2_097_152, keep: 1}
 
 variant =
   if is_nil(System.get_env("ETHEREUM_JSONRPC_VARIANT")) do

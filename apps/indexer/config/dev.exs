@@ -4,12 +4,14 @@ config :indexer, Indexer.Tracer, env: "dev", disabled?: true
 
 config :logger, :indexer,
   level: :error,
-  path: Path.absname("logs/dev/indexer.log")
+  path: Path.absname("logs/dev/indexer.log"),
+  rotate: %{max_bytes: 2_097_152, keep: 1}
 
 config :logger, :indexer_token_balances,
   level: :error,
   path: Path.absname("logs/dev/indexer/token_balances/error.log"),
-  metadata_filter: [fetcher: :token_balances]
+  metadata_filter: [fetcher: :token_balances],
+  rotate: %{max_bytes: 2_097_152, keep: 1}
 
 config :logger, :failed_contract_creations,
   level: :error,

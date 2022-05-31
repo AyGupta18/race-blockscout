@@ -77,7 +77,8 @@ config :block_scout_web, BlockScoutWeb.Tracer, env: "dev", disabled?: true
 
 config :logger, :block_scout_web,
   level: :error,
-  path: Path.absname("logs/dev/block_scout_web.log")
+  path: Path.absname("logs/dev/block_scout_web.log"),
+  rotate: %{max_bytes: 2_097_152, keep: 1}
 
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
