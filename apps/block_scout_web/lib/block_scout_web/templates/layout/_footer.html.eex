@@ -17,12 +17,12 @@
 
     <div class="row">
       <div class="col-xs-12 col-lg-3">
-        <p class="footer-info-text"><%= gettext("Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for the Celo Network.") %></p>
+        <p class="footer-info-text"><%= gettext("Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for the Race Network.") %></p>
         <div class="footer-social-icons">
-          <a href="https://github.com/celo-org/blockscout" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Github") %>'>
+          <a href="#" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Github") %>'>
               <div class="footer-social-icon-container fontawesome-icon github"></div>
           </a>
-          <a href="https://www.twitter.com/CeloOrg/" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Twitter") %>'>
+          <a href="#" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Twitter") %>'>
               <div class="footer-social-icon-container fontawesome-icon twitter"></div>
           </a>
         </div>
@@ -32,16 +32,16 @@
         <h3>BlockScout</h3>
         <ul>
           <li><a href="<%= issue_link(@conn) %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Submit an Issue") %></a></li>
-          <li><a href="https://github.com/celo-org/blockscout" rel="noreferrer" class="footer-link"><%= gettext("Contribute") %></a></li>
-          <li><a href="http://celo.acemlna.com/lt.php?s=db4fc05eafff8b3d37fcbb07a289a00e&i=87A3829A1A1306" rel="noreferrer" class="footer-link"><%= gettext("Chat") %></a></li>
-          <li><a href="https://forum.celo.org/" rel="noreferrer" class="footer-link"><%= gettext("Forum") %></a></li>
+          <li><a href="#" rel="noreferrer" class="footer-link"><%= gettext("Contribute") %></a></li>
+          <li><a href="#" rel="noreferrer" class="footer-link"><%= gettext("Chat") %></a></li>
+          <li><a href="#" rel="noreferrer" class="footer-link"><%= gettext("Forum") %></a></li>
         </ul>
       </div>
       <% main_nets = main_nets(other_networks()) %>
 
       <%= unless Enum.empty?(main_nets) do %>
         <div class="col-xs-12 col-md-4 col-lg-<%= col_size %> footer-list">
-          <h3><%= gettext("Main Networks") %></h3>
+          <h3><%= gettext("Main Network") %></h3>
           <ul>
             <%= for %{title: title, url: url} <- main_nets do %>
               <li><a href="<%= url %>" rel="norefferer" class="footer-link"> <%= title %> </a></li>
@@ -54,7 +54,7 @@
 
       <%= unless Enum.empty?(test_nets) do %>
         <div class="col-xs-12 col-md-4 col-lg-<%= col_size %> footer-list">
-          <h3><%= gettext("Test Networks") %></h3>
+          <h3><%= gettext("Test Network") %></h3>
           <ul>
             <%= for %{title: title, url: url} <- test_nets do %>
               <li><a href="<%= url %>" rel="noreferrer" class="footer-link"> <%= title %> </a></li>
@@ -80,7 +80,7 @@
     <%= unless ignore_version?(version) do %>
       <% release_link = release_link(version) %>
       <div>
-        <%= gettext("Version") %>: <%= release_link %>
+        <%= gettext("Version") %>: 1.0.0 Deqode <%= release_link %>
       </div>
     <% end %>
   </div>

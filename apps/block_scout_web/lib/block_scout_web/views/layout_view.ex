@@ -10,18 +10,13 @@ defmodule BlockScoutWeb.LayoutView do
 
   @default_other_networks [
     %{
-      title: "Celo Mainnet",
-      url: "https://explorer.celo.org",
+      title: "Race Mainnet",
+      url: "#",
       test_net?: false
     },
     %{
-      title: "Celo Alfajores",
-      url: "https://alfajores-blockscout.celo-testnet.org/",
-      test_net?: true
-    },
-    %{
-      title: "Celo Baklava",
-      url: "https://baklava-blockscout.celo-testnet.org/",
+      title: "Race Testnet",
+      url: "http://54.196.176.91:4002/",
       test_net?: true
     }
   ]
@@ -42,7 +37,7 @@ defmodule BlockScoutWeb.LayoutView do
   end
 
   def subnetwork_title do
-    Keyword.get(application_config(), :subnetwork) || "Sokol"
+    Keyword.get(application_config(), :subnetwork) || "Race"
   end
 
   def network_title do

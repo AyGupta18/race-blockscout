@@ -50,7 +50,7 @@ defmodule BlockScoutWeb.Tokens.Helpers do
   end
 
   def token_symbol(%Token{symbol: "cGLD"}) do
-    "CELO"
+    "RACE"
   end
 
   def token_symbol(%Token{symbol: symbol}) do

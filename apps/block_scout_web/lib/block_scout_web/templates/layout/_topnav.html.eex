@@ -42,7 +42,7 @@
                     ) %>
               <% end %>
               <%= link(
-                    gettext("Top Celo Holders"),
+                    gettext("Top Race Holders"),
                     class: "dropdown-item #{tab_status("accounts", @conn.request_path)}",
                     to: address_path(@conn, :index)
                   ) %>
